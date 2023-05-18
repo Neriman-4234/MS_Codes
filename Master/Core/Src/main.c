@@ -107,16 +107,16 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  // Main Part
-/*
+
 	  if(HAL_I2C_IsDeviceReady(&hi2c1, I2C_ADDRESS, 1, 1000) == HAL_OK){
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
 		  HAL_I2C_Master_Transmit(&hi2c1, I2C_ADDRESS, &tx_data, 1, 1000);
 	  }else {
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
 	  }
-*/
+	  HAL_Delay(1000);
 	  // Additional Part
-
+/*
 	  if(HAL_I2C_IsDeviceReady(&hi2c1, I2C_ADDRESS, 1, 10) == HAL_OK){
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
 		  HAL_I2C_Master_Transmit(&hi2c1, I2C_ADDRESS, &tx_arr[tx_index], 1, 10);
@@ -125,7 +125,7 @@ int main(void)
 	  }
 	  tx_index = (tx_index + 1) % 4;
 	  HAL_Delay(1000);
-
+*/
 
   }
   /* USER CODE END 3 */

@@ -60,8 +60,8 @@ all: main-build
 main-build: LW6_Master.elf secondary-outputs
 
 # Tool invocations
-LW6_Master.elf LW6_Master.map: $(OBJS) $(USER_OBJS) F:\VGTU\6th\ Semester\Microcontrollers\ Systems\Labs\LD_ISKfuc-20_Ahmed_Shata\LW6\Master\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LW6_Master.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\VGTU\6th Semester\Microcontrollers Systems\Labs\LD_ISKfuc-20_Ahmed_Shata\LW6\Master\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LW6_Master.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LW6_Master.elf LW6_Master.map: $(OBJS) $(USER_OBJS) C:\Users\LENOVO\Desktop\MS_Codes\Master\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LW6_Master.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\LENOVO\Desktop\MS_Codes\Master\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LW6_Master.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
